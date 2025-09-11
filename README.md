@@ -23,16 +23,3 @@ It demonstrates strong skills in **Selenium WebDriver, Java, Cucumber BDD, Page 
 
 ---
 
-## 📂 Project Structure
-SauceDemo-E-Commerce_Order_Management
-│── src
-│ ├── main/java
-│ │ └── pageobjects # Page Object Model classes
-│ ├── test/java
-│ │ ├── stepdefs # Step Definitions
-│ │ └── runners # Test Runner classes
-│ └── resources
-│ └── features # Gherkin Feature Files
-│
-│── pom.xml # Maven dependencies
-│── README.md # Project documentation
