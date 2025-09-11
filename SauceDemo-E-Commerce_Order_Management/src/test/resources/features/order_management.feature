@@ -3,7 +3,7 @@ Feature: Order Management on SauceDemo
   Background:
     Given I open SauceDemo
 
-  @happy
+  @test
   Scenario: Place a single product order successfully
     When I login with username "standard_user" and password "secret_sauce"
     And I add product "Sauce Labs Backpack" to the cart
