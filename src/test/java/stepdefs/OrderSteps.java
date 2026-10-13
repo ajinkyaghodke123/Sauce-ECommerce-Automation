@@ -1,6 +1,8 @@
 package stepdefs;
 
-import io.cucumber.java.en.*;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.junit.Assert;
 import pageobjects.*;
 
@@ -37,5 +39,13 @@ public class OrderSteps {
         cart.clickCheckout();
         info = new CheckoutInfoPage(Hooks.driver);
         info.enterInfo(first, last, postal);
+    }
+
+    @Then("I should see order confirmation message")
+    public void i_should_see_order_confirmation_message() {
+        overview = new CheckoutOverviewPage(Hooks.driver);
+        overview.finishOrder();
+        complete = new CheckoutCompletePage(Hooks.driver);
+        Assert.assertEquals("Thank you for your order!", complete.getConfirmationText());
     }
 }

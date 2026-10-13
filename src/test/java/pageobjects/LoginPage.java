@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
-    WebDriver driver;
+    private final WebDriver driver;
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;
@@ -14,13 +14,13 @@ public class LoginPage {
     }
 
     @FindBy(id = "user-name")
-    WebElement username;
+    private WebElement username;
 
     @FindBy(id = "password")
-    WebElement password;
+    private WebElement password;
 
     @FindBy(id = "login-button")
-    WebElement loginBtn;
+    private WebElement loginBtn;
 
     public void open() {
         driver.get("https://www.saucedemo.com/");
