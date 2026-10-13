@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class CheckoutInfoPage {
-    WebDriver driver;
+    private final WebDriver driver;
 
     public CheckoutInfoPage(WebDriver driver) {
         this.driver = driver;
@@ -14,16 +14,16 @@ public class CheckoutInfoPage {
     }
 
     @FindBy(id = "first-name")
-    WebElement firstName;
+    private WebElement firstName;
 
     @FindBy(id = "last-name")
-    WebElement lastName;
+    private WebElement lastName;
 
     @FindBy(id = "postal-code")
-    WebElement postalCode;
+    private WebElement postalCode;
 
     @FindBy(id = "continue")
-    WebElement continueBtn;
+    private WebElement continueBtn;
 
     public void enterInfo(String fName, String lName, String zip) {
         firstName.sendKeys(fName);

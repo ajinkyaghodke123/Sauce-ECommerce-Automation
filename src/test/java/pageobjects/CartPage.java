@@ -5,18 +5,18 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class CheckoutOverviewPage {
-    WebDriver driver;
+public class CartPage {
+    private final WebDriver driver;
 
-    public CheckoutOverviewPage(WebDriver driver) {
+    public CartPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(id = "finish")
-    WebElement finishBtn;
+    @FindBy(id = "checkout")
+    private WebElement checkoutBtn;
 
-    public void finishOrder() {
-        finishBtn.click();
+    public void clickCheckout() {
+        checkoutBtn.click();
     }
 }

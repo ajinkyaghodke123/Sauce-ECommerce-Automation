@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class CheckoutCompletePage {
-    WebDriver driver;
+    private final WebDriver driver;
 
     public CheckoutCompletePage(WebDriver driver) {
         this.driver = driver;
@@ -14,7 +14,7 @@ public class CheckoutCompletePage {
     }
 
     @FindBy(className = "complete-header")
-    WebElement confirmationMessage;
+    private WebElement confirmationMessage;
 
     public String getConfirmationText() {
         return confirmationMessage.getText();
